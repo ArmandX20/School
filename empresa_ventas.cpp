@@ -59,7 +59,7 @@ int main(){
     cout<<"Sucursal 2.- "<<sucursal2<<endl;
     cout<<"Sucursal 3.- "<<sucursal3<<endl;
     cout<<"Sucursal 4.- "<<sucursal4<<endl;
-    cout<<"Recaudacion total de la empresa: "<<recaudacionTotal;
+    cout<<"Recaudacion total de la empresa: "<<recaudacionTotal<<endl;
 
     if(sucursal1>sucursal2 && sucursal1>sucursal3 && sucursal1>sucursal4){
         cout<<"La sucursal 1, fue la que vendio mas, con: "<<sucursal1<<" de recaudacion";
