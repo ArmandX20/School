@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 /* el programa va a solicitar la fecha de nacimiento del usuario para poder decirle por consola que tipo de horoscopo es */
-int day[2], month[2], rango=2;//array que se utilizan para guardar los datos
-void entrada(){
+int main() {
+    int day[2], month[2], rango= 2;//array que se utilizan para guardar los datos
+
     for(int i = 0; i<rango; i++){//for que solicita los datos y los guarda en los array
         cout<<endl<<"Ingresa el dia: ";
         cin>>day[i];
@@ -11,8 +12,8 @@ void entrada(){
         cin>>month[i];
         cout<<"Mes ingresado = "<<month[i]<<endl;
     }
-}
-void salida(){
+
+
     for(int i = 0; i<rango; i++){//imprime en pantalla todos los signos de los usuarios
         cout<<endl;
         switch(month[i]){
@@ -179,8 +180,5 @@ void salida(){
                 
         }
     }
-}
-int main() {
-    entrada();
-    salida();
+    return 0;
 }
