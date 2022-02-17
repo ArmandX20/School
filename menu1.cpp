@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
-// vamos a solicitar al usuario su numero de cuenta
-//despues si esta en el sistema mostraremos un menu
-// 1.Ver saldo actual
-// 2.Aumentar
-// 3.Decrementar
-// 4.Salir
-// realizar la operacion solicitada y hacer que se
-//repita hasta que el usuario decida salirse
+/* vamos a solicitar al usuario su numero de cuenta
+despues si esta en el sistema mostraremos un menu
+1.Ver saldo actual
+2.Aumentar
+3.Decrementar
+4.Salir
+realizar la operacion solicitada y hacer que se
+repita hasta que el usuario decida salirse */
 int main() {
     int registro[] = {123456,154877,789456,2129662,2129666};
     int usuario, opcion, saldo = 0, operacion;
