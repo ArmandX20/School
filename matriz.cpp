@@ -8,34 +8,34 @@ int main()
     float matrizidentidad[3][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
     float matriz3[3][6];
     float vector[6], vector2[6], vector3[6];
-    float var1 = 0, var2 = 0, var3 =0;
+    float var1 = 0, var2 = 0, var3 = 0;
 
     /* for que utilizaremos para concatenar la matriz ingresada y una matriz identidad para realizar las operaciones */
-    for (int i = 0; i < 3; i++) //ciclo de filas
+    for (int i = 0; i < 3; i++) // ciclo de filas
     {
-        for (int j = 0; j < 3; j++) //primer ciclo de columnas
+        for (int j = 0; j < 3; j++) // primer ciclo de columnas
         {
-            matriz3[i][j] = matriz[i][j]; //matriz guardada en las primeras posiciones
+            matriz3[i][j] = matriz[i][j]; // matriz guardada en las primeras posiciones
         }
-        for (int k = 3, j = 0; j < 3; k++, j++) //segundo ciclo de columnas
+        for (int k = 3, j = 0; j < 3; k++, j++) // segundo ciclo de columnas
         {
-            matriz3[i][k] = matrizidentidad[i][j]; //guardamos la matriz identidad
+            matriz3[i][k] = matrizidentidad[i][j]; // guardamos la matriz identidad
         }
     }
 
     /* mostramos en pantalla nuestra matriz que sacaremos inversa */
-    cout<<"Matriz inicial:"<<endl;
+    cout << "Matriz inicial:" << endl;
     for (int j = 0; j < 3; j++)
     {
         for (int i = 0; i < 3; i++)
         {
-            cout << matriz[j][i]<<"  ";
+            cout << matriz[j][i] << "  ";
         }
         cout << endl;
     }
 
-    // necesitamos eliminar el elemento en [2][0], 
-    //es el proceso para eliminar ese numero de esa posicion
+    // necesitamos eliminar el elemento en [2][0],
+    // es el proceso para eliminar ese numero de esa posicion
     var1 = matriz[0][0];
     var2 = matriz[2][0];
     for (int i = 0; i < 6; i++)
@@ -55,7 +55,7 @@ int main()
         vector2[i] = matriz3[0][i] * (-var2);
         matriz3[1][i] = vector[i] + vector2[i];
     }
-    
+
     var1 = 0, var2 = 0;
     var1 = matriz3[1][1];
     var2 = matriz3[2][1];
@@ -74,9 +74,8 @@ int main()
         vector2[i] = matriz3[2][i] * -var2;
         vector[i] = matriz3[0][i] * var1;
         matriz3[0][i] = vector[i] + vector2[i];
-
     }
-    
+
     var1 = 0, var2 = 0;
     var1 = matriz3[2][2];
     var2 = matriz3[1][2];
@@ -85,7 +84,6 @@ int main()
         vector2[i] = matriz3[2][i] * -var2;
         vector[i] = matriz3[1][i] * var1;
         matriz3[1][i] = vector[i] + vector2[i];
-
     }
 
     var1 = 0, var2 = 0;
@@ -96,11 +94,10 @@ int main()
         vector2[i] = matriz3[1][i] * -var2;
         vector[i] = matriz3[0][i] * var1;
         matriz3[0][i] = vector[i] + vector2[i];
-
     }
 
-    //por ultimo convertiremos la diagonal de la matriz
-    //en 1, para ya poder obtener la inversa de la matriz 
+    // por ultimo convertiremos la diagonal de la matriz
+    // en 1, para ya poder obtener la inversa de la matriz
 
     var1 = 0, var2 = 0;
     var1 = matriz3[0][0];
@@ -116,8 +113,9 @@ int main()
         matriz3[2][i] = vector3[i];
     }
 
-    //mostramos la matriz inversa
-    cout << endl << "Matriz inversa:"<<endl;
+    // mostramos la matriz inversa
+    cout << endl
+         << "Matriz inversa:" << endl;
     for (int j = 0; j < 3; j++)
     {
         for (int i = 3; i < 6; i++)
