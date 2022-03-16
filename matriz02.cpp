@@ -123,7 +123,8 @@ int main()
 {
     int option01 = 0;
     
-    cout<<"¿De que forma quieres que te muestre las letras?";
+    cout<<"¿De que forma quieres que te muestre las letras?"<<endl;
+    cout<<"1 | 2 | 3 | 4 : ";
     cin>>option01;
 
     switch (option01)
@@ -158,4 +159,7 @@ int main()
         }
         cout << endl;
     }
+    cout<<endl<<"Ejecucion finalizada:D"<<endl;
+    system("pause");
+    return 0;
 }
